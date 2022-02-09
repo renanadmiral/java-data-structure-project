@@ -38,15 +38,18 @@ public final class StatementGenerator {
     private static void writeStatement (BankAccount account, File statement) {
         try {
             PrintWriter writer = new PrintWriter(statement);
+            String horizontalLine = "----------------------------------------------------------------";
 
             writer.printf("Banco "+ account.getBankName() +"\n");
             writer.printf("Agência: ... "+ account.getAgencyId() +"\n");
-            writer.printf("Conta: ..... "+ account.getAccountNumber() +"\n\n");
+            writer.printf("Conta: ..... "+ account.getAccountNumber() +"\n");
+            writer.println(horizontalLine);
 
             writer.printf("Data \t\t\t");
             writer.printf("Tipo \t\t");
             writer.printf("Valor \t\t");
-            writer.printf("Operador \n\n");
+            writer.printf("Operador \n");
+            writer.println(horizontalLine);
 
             for (BankingOperation operation : account.getOperations()) {
                 String datePattern = "dd-MM-yy HH:mm:ss";
@@ -59,6 +62,7 @@ public final class StatementGenerator {
                 writer.printf(operation.getOperationType() + "\t" + extraSeparator);
                 writer.write(operator + operation.getValue() + "\t\t");
                 writer.printf(operation.getTeller()+"\t\n");
+                writer.println(horizontalLine);
             }
             writer.printf("\nSaldo: ...............................\t");
             writer.printf(account.getBalance().toString());
