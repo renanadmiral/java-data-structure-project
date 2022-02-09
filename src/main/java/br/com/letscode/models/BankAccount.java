@@ -54,17 +54,10 @@ public class BankAccount{
     public boolean equals(Object obj) {
         if (!(obj instanceof BankAccount))
             return false;
-        if (((BankAccount) obj).id.equals(this.id))
-            return true;
 
-        BankAccount rhs = (BankAccount) obj;
-        return new EqualsBuilder().
-                append(this.id, rhs.id).
-                append(this.bankName, rhs.bankName).
-                append(this.agencyId, rhs.agencyId).
-                append(this.accountNumber, rhs.accountNumber).
-                append(this.balance, rhs.balance).
-                append(this.operations, rhs.operations).
-                isEquals();
+        BankAccount toBeComparedObj = (BankAccount) obj;
+        return new EqualsBuilder()
+                .append(this.id, toBeComparedObj.id)
+                .isEquals();
     }
 }
