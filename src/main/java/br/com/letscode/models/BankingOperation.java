@@ -1,11 +1,15 @@
 package br.com.letscode.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
+@Getter
 @AllArgsConstructor
+@ToString
 public class BankingOperation implements Comparable<BankingOperation> {
     private Date date;
     private String teller;

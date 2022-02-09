@@ -1,10 +1,10 @@
 package br.com.letscode;
 
-import br.com.letscode.controllers.FileManager;
+import br.com.letscode.controllers.FileDataManager;
 
 public class App {
     public static void main(String[] args) {
-        FileManager fm = new FileManager();
+        FileDataManager fm = new FileDataManager();
 
         fm.loadDataFromCsv("assets/operacoes.csv");
     }
