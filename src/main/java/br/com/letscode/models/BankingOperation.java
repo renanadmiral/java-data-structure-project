@@ -16,10 +16,24 @@ public class BankingOperation implements Comparable<BankingOperation> {
 
     @Override
     public int compareTo(BankingOperation anotherOperation) {
+        if (anotherOperation.date.equals(this.date)
+                && anotherOperation.teller.equals(this.teller)
+                && anotherOperation.operationType.equals(this.operationType)
+                && anotherOperation.value.equals(this.value)
+        ){
+            return 0;
+        }
         if (this.date.before(anotherOperation.date)) {
             return -1;
         }
         if (this.date.after(anotherOperation.date)){
+            return 1;
+        }
+        if (anotherOperation.date.equals(this.date)
+                && (!anotherOperation.teller.equals(this.teller)
+                || !anotherOperation.operationType.equals(this.operationType)
+                || !anotherOperation.value.equals(this.value))
+        ) {
             return +1;
         }
         return 0;
