@@ -7,6 +7,8 @@ import br.com.letscode.models.OperationTypes;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Set;
 
@@ -21,13 +23,13 @@ public final class StatementGenerator {
                     statementsDirectory.mkdirs();
                 }
 
-                File statementFile = new File(statementsDirectory + "/" + account.getId() + ".txt");
+                String statementPath = statementsDirectory + "/" + account.getId() + ".txt";
+                Files.deleteIfExists(Path.of(statementPath));
+                File statementFile = new File(statementPath);
 
-                if (statementFile.createNewFile()) {
+                if (statementFile.createNewFile())
                     System.out.println("File created: " + statementFile.getName());
-                } else {
-                    System.out.println("File already exists.");
-                }
+
                 writeStatement(account, statementFile);
             }
         } catch (IOException e) {
