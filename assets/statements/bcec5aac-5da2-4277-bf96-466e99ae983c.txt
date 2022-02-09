@@ -1,0 +1,28 @@
+Banco Santander
+Agência: ... 3381
+Conta: ..... 60214801-9
+
+Data 			Tipo 		Valor 		Operador 
+
+03-01-22 11:20:27	DEPOSITO	+280.0		Eduarda	
+04-01-22 11:24:42	DEPOSITO	+460.0		Miguel	
+04-01-22 12:24:42	DEPOSITO	+40.0		Brenda	
+04-01-22 15:24:42	DEPOSITO	+420.0		Bryan	
+07-01-22 14:36:58	SAQUE		-40.0		Brenda	
+07-01-22 15:36:58	DEPOSITO	+80.0		Maitê	
+08-01-22 12:18:40	SAQUE		-260.0		Victor	
+08-01-22 14:18:40	DEPOSITO	+240.0		Ângelo	
+20-01-22 12:43:47	DEPOSITO	+60.0		Miguel	
+20-01-22 13:12:24	DEPOSITO	+520.0		Victor	
+20-01-22 14:43:47	SAQUE		-560.0		Leonardo	
+21-01-22 13:37:07	DEPOSITO	+100.0		Juliano	
+21-01-22 14:37:07	DEPOSITO	+580.0		Francisco	
+21-01-22 14:42:37	DEPOSITO	+420.0		Felipe	
+23-01-22 12:32:28	SAQUE		-580.0		Lucas	
+26-01-22 12:53:20	SAQUE		-540.0		Flôr	
+28-01-22 11:34:24	SAQUE		-380.0		Emanuel	
+29-01-22 12:56:11	SAQUE		-320.0		Leonardo	
+29-01-22 13:56:11	DEPOSITO	+500.0		Ângelo	
+29-01-22 15:56:11	DEPOSITO	+600.0		Luiza	
+
+Saldo: ...............................	1620.0

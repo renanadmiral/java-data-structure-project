@@ -1,5 +1,5 @@
 package br.com.letscode.models;
 
-public enum operationTypes {
+public enum OperationTypes {
     SAQUE, DEPOSITO
 }

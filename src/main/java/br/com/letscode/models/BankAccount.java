@@ -1,8 +1,6 @@
 package br.com.letscode.models;
 
 import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -10,9 +8,7 @@ import java.math.BigDecimal;
 import java.util.Set;
 import java.util.TreeSet;
 
-//remover getter depois que finalizar
 @Getter
-@ToString
 public class BankAccount{
     private String id;
     private String bankName;
@@ -34,7 +30,7 @@ public class BankAccount{
 
     public void doOperationsCalculation () {
         for (BankingOperation operation : this.operations) {
-            if (operation.getOperationType().equals(operationTypes.SAQUE.toString())) {
+            if (operation.getOperationType().equals(OperationTypes.SAQUE.toString())) {
                 this.balance = this.balance.subtract(operation.getValue());
             } else {
                 this.balance = this.balance.add(operation.getValue());

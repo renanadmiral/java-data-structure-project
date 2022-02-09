@@ -51,7 +51,7 @@ public class FileDataManager {
 
             this.doAccountsOperationsCalculation();
         } catch (IOException | ParseException e) {
-            System.out.println("erro: " + e.getMessage());
+            System.out.println("error: " + e.getMessage());
         }
     }
 
@@ -59,5 +59,9 @@ public class FileDataManager {
         for (BankAccount account : this.accounts) {
             account.doOperationsCalculation();
         }
+    }
+
+    public void generateStatements() {
+        StatementGenerator.generateStatements(this.accounts);
     }
 }
